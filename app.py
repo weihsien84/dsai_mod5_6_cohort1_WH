@@ -11,6 +11,8 @@ gemini_api_key = os.getenv("gemini_api_key")
 genai.configure(api_key=gemini_api_key)
 model = genai.GenerativeModel("gemini-2.0-flash")
 
+gemini_telegram_token = os.getenv('GEMINI_TELEGRAM_TOKEN')
+
 app = Flask(__name__)
 
 first_time = 1
