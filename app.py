@@ -5,6 +5,7 @@ import google.generativeai as genai
 import os
 import sqlite3
 import datetime
+import requests
 
 gemini_api_key = os.getenv("gemini_api_key")
 
