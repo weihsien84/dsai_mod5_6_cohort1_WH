@@ -2,17 +2,16 @@
 
 from flask import Flask,request,render_template
 import google.generativeai as genai1
-#from google import genai
+from google import genai
 import os
 import sqlite3
 import datetime
 import requests
 
-
 gemini_api_key = os.getenv("gemini_api_key")
 
-#gemini_client = genai1.Client(api_key=gemini_api_key)
-#gemini_model = "gemini_2.0-flash"
+genmini_client = genai.Client(api_key=gemini_api_key)
+genmini_model = "gemini-2.0-flash"
 
 genai1.configure(api_key=gemini_api_key)
 model = genai1.GenerativeModel("gemini-2.0-flash")
